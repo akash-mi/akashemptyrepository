@@ -1,0 +1,4 @@
+select count([Quantity Received]) as total_quantity_received, [Vendor SkuCode],[Item Type Name]
+from [dbo].[trips#xlsx] 
+group by [Item Type Name],[Vendor SkuCode]
+order by  count([Quantity Received]) desc

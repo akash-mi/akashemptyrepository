@@ -1,0 +1,4 @@
+select  sum([Values of Goods Received with taxes]) as "Money recieved" ,[Vendor SkuCode]
+from [dbo].[trips#xlsx]
+group by [Vendor SkuCode]
+order by  sum([Values of Goods Received with taxes]) desc
